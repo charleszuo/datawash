@@ -20,6 +20,8 @@ import zc.datawash.util.DataWashUtil;
 import com.csvreader.CsvReader;
 import com.csvreader.CsvWriter;
 
+
+
 public class DataWasher {
 	private final AnswerPool answerPool = new AnswerPool();
 	
@@ -84,7 +86,7 @@ public class DataWasher {
 							// set colnum - question option mapping
 							questionOptions.put(i, questionOption);
 						}else{
-							throw new RuntimeException("²»Ö§³Ö¸ÃÎÊ¾í¸ñÊ½!");
+							throw new RuntimeException("ï¿½ï¿½Ö§ï¿½Ö¸ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ê½!");
 						}
 					}
 				}
@@ -211,7 +213,7 @@ public class DataWasher {
 			if(rowNum == 0){
 				String[] titles = readerAgain.getValues();
 				String[] newTitles = addOneColumnToRecord(titles);
-				newTitles[newTitles.length - 1] = "ÇåÏ´×´Ì¬";
+				newTitles[newTitles.length - 1] = "ï¿½ï¿½Ï´×´Ì¬";
 				deleteFlagFileWriter.writeRecord(newTitles);
 			}else{
 				String[] record = readerAgain.getValues();
